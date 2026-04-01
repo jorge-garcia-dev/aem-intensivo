@@ -2,8 +2,10 @@
     <div class="header-lp__container">
         <div class="header-lp__left">
             <div class="header-lp__logo" data-sly-test="${properties.logoPath}">
-                <img src="${properties.logoPath}" alt="Logo"/>
-            </div>        
+                <a href="${properties.logoLink @ extension='html'}">
+                    <img src="${properties.logoPath}" alt="Logo"/>
+                </a>
+            </div>       
             
             <button class="header-lp__hamburger" aria-label="Menu">
                 <span></span>

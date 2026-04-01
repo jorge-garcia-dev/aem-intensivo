@@ -17,6 +17,12 @@
                 fieldLabel="Logo"
                 name="./logoPath"
                 rootPath="/content/dam"/>
+            <logoLink
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                fieldLabel="Enlace del Logo"
+                name="./logoLink"
+                rootPath="/content"/>
             <navItems
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
