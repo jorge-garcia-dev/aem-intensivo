@@ -26,6 +26,12 @@
     object-fit: contain;
 }
 
+@media (max-width: 1366px) {
+    .brands__container {
+        margin: 0 40px;
+    }
+}
+
 // Tablet
 @media (max-width: 1024px) {
     .brands__container {

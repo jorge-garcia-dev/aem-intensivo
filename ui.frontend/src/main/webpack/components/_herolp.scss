@@ -90,6 +90,16 @@
     height: auto;
 }
 
+@media (max-width: 1366px) {
+    .hero-lp__container {
+        padding: 0 60px;
+    }
+
+    .hero-lp__car img {
+        width: 700px;
+    }
+}
+
 // Tablet
 @media (max-width: 1024px) {
     .hero-lp {
