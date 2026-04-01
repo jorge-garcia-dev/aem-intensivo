@@ -3,21 +3,17 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:deviceGroups="[mobile/groups/responsive]"
-        cq:lastModified="{Date}2026-03-18T11:39:56.143+01:00"
+        cq:lastModified="{Date}2026-04-01T11:47:18.777+02:00"
         cq:lastModifiedBy="admin"
-        cq:template="/conf/itv/settings/wcm/templates/landing-page"
+        cq:template="/conf/itv/settings/wcm/templates/brand-page-"
         jcr:primaryType="cq:PageContent"
         sling:resourceType="itv/components/page">
         <root
-            jcr:lastModified="{Date}2026-03-18T09:41:53.359+01:00"
-            jcr:lastModifiedBy="admin"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="itv/components/container"
             layout="responsiveGrid">
-            <experiencefragment
-                jcr:created="{Date}2026-03-17T10:43:33.428+01:00"
-                jcr:createdBy="admin"
-                jcr:lastModified="{Date}2026-03-18T09:33:13.314+01:00"
+            <experiencefragment-header
+                jcr:lastModified="{Date}2026-04-01T11:47:05.194+02:00"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="itv/components/experiencefragment"
@@ -25,11 +21,10 @@
             <container
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="itv/components/container"
-                editable="{Boolean}true"/>
-            <experiencefragment_2087629451
-                jcr:created="{Date}2026-03-18T09:45:38.569+01:00"
-                jcr:createdBy="admin"
-                jcr:lastModified="{Date}2026-03-18T09:45:38.569+01:00"
+                editable="{Boolean}true"
+                layout="responsiveGrid"/>
+            <experiencefragment_h
+                jcr:lastModified="{Date}2026-04-01T11:47:18.777+02:00"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="itv/components/experiencefragment"
