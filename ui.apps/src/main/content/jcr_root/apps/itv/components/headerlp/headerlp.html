@@ -13,11 +13,13 @@
                 <span></span>
             </button>
 
-            <nav class="header-lp__nav">
-                <ul data-sly-list.item="${properties.navItems}">
-                    <li><a href="#">${item}</a></li>
-                </ul>
-            </nav>       
+            <div data-sly-use.headerModel="com.itv.core.models.HeaderModel">
+                <nav class="header-lp__nav">
+                    <ul data-sly-list.item="${headerModel.navItems}">
+                        <li><a href="${item.navLink @ extension='html'}">${item.text}</a></li>
+                    </ul>
+                </nav>
+            </div>      
         </div> 
         
         <div class="header-lp__button">
