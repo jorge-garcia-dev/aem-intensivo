@@ -3,7 +3,7 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:deviceGroups="[mobile/groups/responsive]"
-        cq:lastModified="{Date}2026-04-01T11:47:18.777+02:00"
+        cq:lastModified="{Date}2026-04-06T12:04:48.416+02:00"
         cq:lastModifiedBy="admin"
         cq:template="/conf/itv/settings/wcm/templates/brand-page-"
         jcr:primaryType="cq:PageContent"
@@ -24,11 +24,11 @@
                 editable="{Boolean}true"
                 layout="responsiveGrid"/>
             <experiencefragment_h
-                jcr:lastModified="{Date}2026-04-01T11:47:18.777+02:00"
+                jcr:lastModified="{Date}2026-04-06T12:04:48.413+02:00"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="itv/components/experiencefragment"
-                fragmentVariationPath="/content/experience-fragments/itv/us/en/site/footer---lp-/master"/>
+                fragmentVariationPath="/content/experience-fragments/itv/us/en/site/footer---bp/master"/>
         </root>
         <cq:responsive jcr:primaryType="nt:unstructured">
             <breakpoints jcr:primaryType="nt:unstructured">
