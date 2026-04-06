@@ -29,9 +29,11 @@
                 <div class="footer-lp__titleLinks">
                     <h3>${properties.titleLinks}</h3>
                 </div>
-                <ul data-sly-list.item="${properties.navItems}">
-                    <li><a href="#">${item}</a></li>
-                </ul>
+                <sly data-sly-use.footerModel="com.itv.core.models.FooterModel">
+                    <ul data-sly-list.item="${footerModel.navItems}">
+                        <li><a href="${item.navLink @ extension='html'}">${item.text}</a></li>
+                    </ul>
+                </sly>
             </div>
         </div>
         
