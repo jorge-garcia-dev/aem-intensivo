@@ -1,0 +1,16 @@
+<div class="highlights"
+     data-sly-use.highlightsModel="com.itv.core.models.HighlightsModel">
+    <div class="highlights__container">
+        <div class="highlights__grid">
+            <sly data-sly-list.card="${highlightsModel.cards}">
+                <div class="highlights__card">
+                    <div class="highlights__icon" data-sly-test="${card.icon}">
+                        <img src="${card.icon}" alt="icon"/>
+                    </div>
+                    <div class="highlights__value">${card.value}</div>
+                    <div class="highlights__tag">${card.tag}</div>
+                </div>
+            </sly>
+        </div>
+    </div>
+</div>
