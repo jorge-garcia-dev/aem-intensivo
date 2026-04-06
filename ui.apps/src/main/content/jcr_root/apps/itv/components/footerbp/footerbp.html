@@ -1,0 +1,19 @@
+<footer class="footer-bp">
+    <div class="footer-bp__container">
+        <span class="footer-bp__copyright">${properties.copyright}</span>
+        <nav class="footer-bp__links">
+            <a href="${properties.legalLink @ extension='html'}" 
+               data-sly-test="${properties.legalText}">
+                ${properties.legalText}
+            </a>
+            <a href="${properties.privacyLink @ extension='html'}"
+               data-sly-test="${properties.privacyText}">
+                ${properties.privacyText}
+            </a>
+            <a href="${properties.cookiesLink @ extension='html'}"
+               data-sly-test="${properties.cookiesText}">
+                ${properties.cookiesText}
+            </a>
+        </nav>
+    </div>
+</footer>
