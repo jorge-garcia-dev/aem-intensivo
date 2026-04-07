@@ -2,7 +2,7 @@
     <div class="header-lp__container">
         <div class="header-lp__left">
             <div class="header-lp__logo" data-sly-test="${properties.logoPath}">
-                <a href="${properties.logoLink @ extension='html'}">
+                <a href="${properties.logoLink @ extension='html'}?wcmmode=disabled">
                     <img src="${properties.logoPath}" alt="Logo"/>
                 </a>
             </div>       
@@ -13,13 +13,11 @@
                 <span></span>
             </button>
 
-            <div data-sly-use.headerModel="com.itv.core.models.HeaderModel">
-                <nav class="header-lp__nav">
-                    <ul data-sly-list.item="${headerModel.navItems}">
-                        <li><a href="${item.navLink @ extension='html'}">${item.text}</a></li>
-                    </ul>
-                </nav>
-            </div>      
+            <nav class="header-lp__nav" data-sly-use.headerModel="com.itv.core.models.HeaderModel">
+                <ul data-sly-list.item="${headerModel.navItems}">
+                    <li><a href="${item.navLink @ extension='html'}?wcmmode=disabled">${item.text}</a></li>
+                </ul>
+            </nav>     
         </div> 
         
         <div class="header-lp__button">

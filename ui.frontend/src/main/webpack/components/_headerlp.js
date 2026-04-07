@@ -6,9 +6,11 @@
         
         if (hamburger) {
             const nav = document.querySelector('.header-lp__nav');
+            const spans = hamburger.querySelectorAll('span');
+            
             if (nav) {
                 nav.classList.toggle('active');
-                console.log('Menu toggled'); // Para debug
+                hamburger.classList.toggle('active');
             }
         }
     });
