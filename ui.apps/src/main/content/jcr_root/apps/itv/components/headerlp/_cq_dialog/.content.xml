@@ -52,6 +52,11 @@
                 sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                 fieldLabel="Texto del Botón"
                 name="./textButton"/>
+            <buttonAction
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                fieldLabel="Acción del botón (tel:, https://wa.me/, #)"
+                name="./buttonAction"/>
         </items>
     </content>
 </jcr:root>

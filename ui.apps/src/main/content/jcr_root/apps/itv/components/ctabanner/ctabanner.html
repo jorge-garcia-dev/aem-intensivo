@@ -1,0 +1,13 @@
+<div class="cta-banner">
+    <div class="cta-banner__container">
+        <div class="cta-banner__content">
+            <h2 class="cta-banner__title" data-sly-test="${properties.title}">${properties.title}</h2>
+            <p class="cta-banner__description" data-sly-test="${properties.textDescription}">${properties.textDescription}</p>
+        </div>
+        <a class="cta-banner__button" 
+           href="${properties.buttonLink @ extension='html'}?wcmmode=disabled"
+           data-sly-test="${properties.buttonText}">
+            ${properties.buttonText}
+        </a>
+    </div>
+</div>

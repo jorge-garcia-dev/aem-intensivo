@@ -56,18 +56,24 @@
     background-color: white;
 }
 
-.header-lp__button{
+.header-lp__button {
     display: inline-flex;
     align-items: center;
     gap: 6px;
     padding: 4px 40px;
-    background-color: #12b974; // Fondo turquesa
-    color: white; // Texto blanco
+    background-color: #12b974;
+    border-radius: 40px;
+    height: 40px;
+}
+
+.header-lp__button a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
     text-decoration: none;
-    border-radius: 40px; // Muy redondeado
+    color: white;
     font-weight: 500;
     font-size: 16px;
-    height: 40px;
 }
 
 .header-lp__button svg {
