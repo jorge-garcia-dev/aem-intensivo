@@ -1,6 +1,15 @@
 <div class="highlights"
      data-sly-use.highlightsModel="com.itv.core.models.HighlightsModel">
     <div class="highlights__container">
+        <div class="highlights__section-header">
+            <div class="highlights__section-tag" data-sly-test="${properties.sectionTag}">
+                <span class="highlights__section-line"></span>
+                <span class="highlights__section-label">${properties.sectionTag}</span>
+            </div>
+            <h2 class="highlights__section-title" data-sly-test="${properties.sectionTitle}">
+                ${properties.sectionTitle}
+            </h2>
+        </div>
         <div class="highlights__grid">
             <sly data-sly-list.card="${highlightsModel.cards}">
                 <div class="highlights__card">

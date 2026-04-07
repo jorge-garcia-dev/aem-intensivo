@@ -1,0 +1,18 @@
+<div class="video-bp">
+    <div class="video-bp__container">
+        <div class="video-bp__section-header">
+            <div class="video-bp__section-tag" data-sly-test="${properties.sectionTag}">
+                <span class="video-bp__section-line"></span>
+                <span class="video-bp__section-label">${properties.sectionTag}</span>
+            </div>
+            <h2 class="video-bp__section-title" data-sly-test="${properties.sectionTitle}">
+                ${properties.sectionTitle}
+            </h2>
+        </div>
+        <div class="video-bp__wrapper" data-sly-test="${properties.videoPath}">
+            <video class="video-bp__player" controls>
+                <source src="${properties.videoPath}" type="video/mp4"/>
+            </video>
+        </div>
+    </div>
+</div>

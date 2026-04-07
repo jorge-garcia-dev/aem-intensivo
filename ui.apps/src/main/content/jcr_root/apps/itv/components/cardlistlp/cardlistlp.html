@@ -1,24 +1,36 @@
 <sly data-sly-use.model="com.itv.core.models.CardsModel"/>
 
-<div class="cardlist cardlist--${properties.layout}">
-    <div class="swiper">
-        <div class="swiper-wrapper">
-            <sly data-sly-list.card="${model.cards}">
-                <div class="swiper-slide">
-                    <div class="cardlist__card">
-                        <img class="cardlist__image" src="${card.image @ context='uri'}" alt="${card.title}"/>
-                        <div class="cardlist__content">
-                            <h2 class="cardlist__title">${card.title}</h2>
-                            <span class="cardlist__text">${card.text}</span>
-                            <div class="cardlist__buttons">
-                                <a class="cardlist__btn cardlist__btn--primary" href="${card.buttonLink @ context='uri'}">${card.buttonText}</a>
-                                <a class="cardlist__btn cardlist__btn--secondary" href="${card.button2Link @ context='uri'}">${card.button2Text}</a>
+<div class="cardlist-wrapper">
+    <div class="cardlist-header" data-sly-test="${properties.sectionTag || properties.sectionTitle}">
+        <div class="cardlist-header__tag" data-sly-test="${properties.sectionTag}">
+            <span class="cardlist-header__line"></span>
+            <span class="cardlist-header__label">${properties.sectionTag}</span>
+        </div>
+        <h2 class="cardlist-header__title" data-sly-test="${properties.sectionTitle}">
+            ${properties.sectionTitle}
+        </h2>
+    </div>
+
+    <div class="cardlist cardlist--${properties.layout}">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <sly data-sly-list.card="${model.cards}">
+                    <div class="swiper-slide">
+                        <div class="cardlist__card">
+                            <img class="cardlist__image" src="${card.image @ context='uri'}" alt="${card.title}"/>
+                            <div class="cardlist__content">
+                                <h2 class="cardlist__title">${card.title}</h2>
+                                <span class="cardlist__text">${card.text}</span>
+                                <div class="cardlist__buttons">
+                                    <a class="cardlist__btn cardlist__btn--primary" href="${card.buttonLink @ context='uri'}">${card.buttonText}</a>
+                                    <a class="cardlist__btn cardlist__btn--secondary" href="${card.button2Link @ context='uri'}">${card.button2Text}</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </sly>
+                </sly>
+            </div>
+            <div class="swiper-pagination"></div>
         </div>
-        <div class="swiper-pagination"></div>
     </div>
 </div>
