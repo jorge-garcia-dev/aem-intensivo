@@ -1,0 +1,23 @@
+<div class="valores"
+     data-sly-use.valoresModel="com.itv.core.models.ValoresModel">
+    <div class="valores__container">
+        <div class="valores__section-header">
+            <div class="valores__section-tag" data-sly-test="${properties.sectionTag}">
+                <span class="valores__section-line"></span>
+                <span class="valores__section-label">${properties.sectionTag}</span>
+            </div>
+            <h2 class="valores__section-title" data-sly-test="${properties.sectionTitle}">
+                ${properties.sectionTitle}
+            </h2>
+        </div>
+        <div class="valores__grid">
+            <sly data-sly-list.card="${valoresModel.cards}">
+                <div class="valores__card">
+                    <div class="valores__number" data-sly-test="${card.number}">${card.number}</div>
+                    <h3 class="valores__title" data-sly-test="${card.title}">${card.title}</h3>
+                    <p class="valores__text" data-sly-test="${card.text}">${card.text}</p>
+                </div>
+            </sly>
+        </div>
+    </div>
+</div>

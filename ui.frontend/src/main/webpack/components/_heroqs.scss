@@ -147,6 +147,11 @@
         min-height: 600px;
     }
 
+    .hero-qs {
+        height: auto;
+        min-height: calc(100svh - 88px);
+    }
+
     .hero-qs__container {
         padding: 40px 20px;
     }

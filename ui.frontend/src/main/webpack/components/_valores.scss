@@ -1,0 +1,134 @@
+.valores {
+    background-color: #0a0a0a;
+    padding: 100px 0;
+}
+
+.valores__container {
+    margin: 0 160px;
+}
+
+.valores__section-header {
+    margin-bottom: 56px;
+}
+
+.valores__section-tag {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.valores__section-line {
+    width: 24px;
+    height: 2px;
+    background-color: #007bff;
+    display: block;
+}
+
+.valores__section-label {
+    font-size: 12px;
+    color: #007bff;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.valores__section-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+}
+
+.valores__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.valores__card {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    padding: 36px 28px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.valores__card.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.valores__card:nth-child(2) { transition-delay: 0.1s; }
+.valores__card:nth-child(3) { transition-delay: 0.2s; }
+
+.valores__number {
+    font-size: 12px;
+    color: #007bff;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    margin-bottom: 16px;
+}
+
+.valores__title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 12px 0;
+}
+
+.valores__text {
+    font-size: 14px;
+    color: #888888;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.aem-AuthorLayer-Edit .valores__card,
+.aem-AuthorLayer-Preview .valores__card {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 1366px) {
+    .valores__container {
+        margin: 0 40px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .valores {
+        padding: 72px 0;
+    }
+
+    .valores__container {
+        margin: 0 16px;
+    }
+
+    .valores__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .valores__section-title {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+    .valores {
+        padding: 56px 0;
+    }
+
+    .valores__container {
+        margin: 0 20px;
+    }
+
+    .valores__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .valores__card {
+        padding: 28px 20px;
+    }
+}

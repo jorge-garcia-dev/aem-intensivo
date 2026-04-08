@@ -196,7 +196,10 @@
         margin: 0 40px 40px 40px;
     }
     .cardlist {
-        padding: 0 40px 80px 40px;
+        padding: 80px 40px;
+    }
+    .cardlist-wrapper .cardlist {
+        padding-top: 0;
     }
 }
 
@@ -205,7 +208,14 @@
         margin: 0 16px 32px 16px;
     }
     .cardlist {
-        padding: 0 16px 80px 16px;
+        padding: 80px 16px;
+    }
+    .cardlist-wrapper .cardlist {
+        padding-top: 0;
+    }
+    .cardlist--horizontal {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
     .cardlist-header__title {
         font-size: 22px;
@@ -217,7 +227,14 @@
         margin: 0 20px 24px 20px;
     }
     .cardlist {
-        padding: 0 16px 80px 16px;
+        padding: 80px 16px;
+    }
+    .cardlist-wrapper .cardlist {
+        padding-top: 0;
+    }
+    .cardlist--horizontal {
+        grid-template-columns: 1fr;
+        gap: 16px;
     }
     .cardlist-header__title {
         font-size: 18px;
