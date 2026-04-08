@@ -10,9 +10,9 @@ import java.util.List;
 
 @Model(adaptables = Resource.class, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 
-public class ValoresModel {
-
-    @Self
+public class EquipoModel {
+    
+     @Self
     private Resource resource;
 
     private List<Card> cards = new ArrayList<>();
@@ -22,11 +22,11 @@ public class ValoresModel {
         Resource cardsResource = resource.getChild("card");
         if (cardsResource != null) {
             for (Resource item : cardsResource.getChildren()) {
-                String number = item.getValueMap().get("number", String.class);
+                String image = item.getValueMap().get("image", String.class);
                 String title = item.getValueMap().get("title", String.class);
                 String text = item.getValueMap().get("text", String.class);
                 if (title != null && text != null) {
-                    cards.add(new Card(number, title, text));
+                    cards.add(new Card(image, title, text));
                 }
             }
         }
@@ -37,17 +37,17 @@ public class ValoresModel {
     }
 
     public static class Card {
-        private String number;
+        private String image;
         private String title;
         private String text;
 
-        public Card(String number, String title, String text) {
-            this.number = number;
+        public Card(String image, String title, String text) {
+            this.image = image;
             this.title = title;
             this.text = text;
         }
 
-        public String getNumber() { return number; }
+        public String getImage() { return image; }
         public String getTitle() { return title; }
         public String getText() { return text; }
     }

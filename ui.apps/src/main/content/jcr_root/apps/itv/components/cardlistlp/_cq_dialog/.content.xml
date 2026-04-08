@@ -61,8 +61,9 @@
                                         <image
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                                            fieldLabel="Image"
-                                            name="./image"/>
+                                            fieldLabel="Imagen"
+                                            name="./image"
+                                            rootPath="/content/dam/itv"/> 
                                         <title
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="granite/ui/components/coral/foundation/form/textfield"

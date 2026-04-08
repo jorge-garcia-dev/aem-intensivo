@@ -1,0 +1,26 @@
+<div class="equipo"
+     data-sly-use.equipoModel="com.itv.core.models.EquipoModel">
+    <div class="equipo__container">
+        <div class="equipo__section-header">
+            <div class="equipo__section-tag" data-sly-test="${properties.sectionTag}">
+                <span class="equipo__section-line"></span>
+                <span class="equipo__section-label">${properties.sectionTag}</span>
+            </div>
+            <h2 class="equipo__section-title" data-sly-test="${properties.sectionTitle}">
+                ${properties.sectionTitle}
+            </h2>
+        </div>
+
+        <div class="equipo__grid">
+            <sly data-sly-list.card="${equipoModel.cards}">
+                <div class="equipo__card">
+                <div class="equipo__image" data-sly-test="${card.image}">
+                    <img src="${card.image}" alt="${card.title}"/>
+                </div>                    
+                <h3 class="equipo__title" data-sly-test="${card.title}">${card.title}</h3>
+                <p class="equipo__text" data-sly-test="${card.text}">${card.text}</p>
+                </div>
+            </sly>
+        </div>
+    </div>
+</div>
