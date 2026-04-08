@@ -1,0 +1,26 @@
+<section class="hero-qs">
+    <video class="hero-qs__video" autoplay muted loop playsinline>
+        <source src="${properties.backgroundVideo}" type="video/mp4"/>
+    </video>
+    <div class="hero-qs__overlay"></div>
+    
+    <div class="hero-qs__container">
+        <div class="hero-qs__content">
+            <div class="hero-qs__title">
+                <h2>${properties.title}</h2>
+            </div>
+            <div class="hero-qs__textDescription">
+                ${properties.textDescription}
+            </div>
+            <div class="hero-qs__buttons" data-sly-test="${properties.button1Text}">
+                <a href="${properties.button1Link @ context='uri'}" class="hero-qs__button hero-qs__button--primary">
+                    ${properties.button1Text}
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="hero-qs__scroll">
+        <span></span>
+        <span></span>
+    </div>
+</section>
