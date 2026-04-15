@@ -1,0 +1,27 @@
+<section class="map-section" data-sly-test="${properties.mapUrl}">
+    <div class="map-section__wrapper">
+        
+        <div class="highlights__section-header highlights__section-header--dark" data-sly-test="${properties.sectionTitle}">
+            <div class="highlights__section-tag" data-sly-test="${properties.sectionTag}">
+                <span class="highlights__section-line"></span>
+                <span class="highlights__section-label">${properties.sectionTag}</span>
+            </div>
+            <h2 class="highlights__section-title">
+                ${properties.sectionTitle}
+            </h2>
+        </div>
+
+        <div class="map-section__container">
+            <iframe 
+                class="map-section__iframe"
+                src="${properties.mapUrl}" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+</section>
+
+<div data-sly-test="${wcmmode.edit && !properties.mapUrl}" class="cq-placeholder" data-emptytext="Configurar Google Maps"></div>
