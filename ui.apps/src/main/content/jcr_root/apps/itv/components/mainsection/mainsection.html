@@ -1,0 +1,74 @@
+<section class="contact-main" data-sly-use.model="com.itv.core.models.MainSectionModel">
+    <div class="contact-main__container">
+        
+        <div class="contact-main__info">
+            <div class="highlights__section-header">
+                <div class="highlights__section-tag" data-sly-test="${properties.sectionTag}">
+                    <span class="highlights__section-line"></span>
+                    <span class="highlights__section-label">${properties.sectionTag}</span>
+                </div>
+                <h2 class="highlights__section-title" data-sly-test="${properties.sectionTitle}">
+                    ${properties.sectionTitle}
+                </h2>
+            </div>
+
+            <p class="contact-main__description" data-sly-test="${properties.descriptionText}">
+                ${properties.descriptionText}
+            </p>
+
+            <div class="contact-main__list" data-sly-list.item="${model.cards}">
+                <div class="contact-card">
+                    <div class="contact-card__icon-wrapper" data-sly-test="${item.icon}">
+                        <img src="${item.icon}" alt="${item.tag}" class="contact-card__icon"/>
+                    </div>
+                    <div class="contact-card__text">
+                        <span class="contact-card__label">${item.tag}</span>
+                        <span class="contact-card__value">${item.value}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-main__form-wrapper">
+            <h3 class="contact-main__form-title" data-sly-test="${properties.tituloFormulario}">
+                ${properties.tituloFormulario}
+            </h3>
+            
+            <form id="contactForm" class="contact-form" novalidate>
+                <div class="form-group">
+                    <label for="name">${properties.labelNombre || 'Nombre y apellidos *'}</label>
+                    <input type="text" id="name" name="name" placeholder="Escribe tu nombre completo" required>
+                    <span class="error-msg">Este campo es obligatorio y solo admite texto.</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">${properties.labelEmail || 'Email *'}</label>
+                    <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                    <span class="error-msg">Introduce un email válido.</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">${properties.labelTelefono || 'Teléfono'}</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+34 000 000 000">
+                    <span class="error-msg">Solo se admiten números.</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">${properties.labelConsulta || 'Consulta *'}</label>
+                    <textarea id="message" 
+                            name="message" 
+                            rows="4" 
+                            placeholder="Escribe tu mensaje..." 
+                            required></textarea>
+                    <div class="char-counter"><span id="currentChars">0</span> / 300</div>
+                    <span class="error-msg">Solo se permiten letras, números y signos de puntuación básicos. No uses símbolos especiales (< > / [ ] { }).</span>
+                </div>
+
+                <button type="submit" id="submitBtn" class="contact-form__submit" disabled>
+                    ${properties.textBoton || 'Enviar mensaje'}
+                </button>
+            </form>
+        </div>
+
+    </div>
+</section>

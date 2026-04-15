@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Sección de Contacto"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/tabs"
+        maximized="{Boolean}true">
+        <items jcr:primaryType="nt:unstructured">
+            <leftContent
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Información General"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <sectionTag
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Etiqueta (ej: INFORMACIÓN DE CONTACTO)"
+                        name="./sectionTag"/>
+                    <sectionTitle
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Título de sección"
+                        name="./sectionTitle"/>
+                    <descriptionText
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                        fieldLabel="Texto descriptivo"
+                        name="./descriptionText"
+                        rows="3"/>
+                    
+                    <contactCards
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                        fieldLabel="Datos de contacto (Icono, Etiqueta, Valor)"
+                        composite="{Boolean}true">
+                        <field
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            name="./contactItems">
+                            <items jcr:primaryType="nt:unstructured">
+                                <icon
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                    fieldLabel="Icono (SVG/PNG)"
+                                    name="./icon"
+                                    rootPath="/content/dam/itv"/>
+                                <tag
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldLabel="Etiqueta (ej: TELÉFONO)"
+                                    name="./tag"/>
+                                <value
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldLabel="Valor (ej: +34 999...)"
+                                    name="./value"/>
+                            </items>
+                        </field>
+                    </contactCards>
+                </items>
+            </leftContent>
+            <rightContent
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Formulario"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <tituloFormulario
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Título del Formulario"
+                        name="./tituloFormulario"/>
+                    <labelNombre
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Etiqueta Campo Nombre"
+                        name="./labelNombre"
+                        emptyText="Nombre y apellidos *"/>
+
+                    <labelEmail
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Etiqueta Campo Email"
+                        name="./labelEmail"
+                        emptyText="Email *"/>
+
+                    <labelTelefono
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Etiqueta Campo Teléfono"
+                        name="./labelTelefono"
+                        emptyText="Teléfono"/>
+
+                    <labelConsulta
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Etiqueta Campo Consulta"
+                        name="./labelConsulta"
+                        emptyText="Consulta *"/>
+
+                    <textBoton
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Texto del Botón"
+                        name="./textBoton"
+                        emptyText="Enviar mensaje"/>
+                </items>
+            </rightContent>
+        </items>
+    </content>
+</jcr:root>
