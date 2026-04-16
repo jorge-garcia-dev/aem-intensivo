@@ -19,3 +19,34 @@
 </sly>
 
 <sly data-sly-resource="${'contexthub' @ resourceType='granite/contexthub/components/contexthub'}"/>
+
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N4PY75BGPT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-N4PY75BGPT');
+</script>
+
+<!-- Cookie Consent -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css">
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+<script>
+  window.addEventListener('load', function() {
+    window.cookieconsent.initialise({
+      palette: {
+        popup: { background: "#141414" },
+        button: { background: "#c9a84c" }
+      },
+      theme: "classic",
+      position: "bottom",
+      content: {
+        message: "Utilizamos cookies para mejorar tu experiencia en BuyCar.",
+        dismiss: "Aceptar",
+        link: "Más información",
+        href: "#"
+      }
+    });
+  });
+</script>

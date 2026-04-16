@@ -18,3 +18,41 @@
     <sly data-sly-call="${clientlib.js @ categories='itv.base', async=true}"/>
 </sly>
 
+<!-- Modal Política de Cookies -->
+<div id="cookies-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:99999; justify-content:center; align-items:center;">
+  <div style="background:#1a1a1a; color:#fff; max-width:600px; width:90%; border-radius:8px; padding:2rem; position:relative; max-height:80vh; overflow-y:auto;">
+    <button onclick="document.getElementById('cookies-modal').style.display='none'" style="position:absolute; top:1rem; right:1rem; background:none; border:none; color:#fff; font-size:1.5rem; cursor:pointer;">✕</button>
+    <h2 style="margin-bottom:1rem;">Política de Cookies</h2>
+    <p>BuyCar utiliza cookies propias y de terceros para mejorar la experiencia de navegación y ofrecer contenidos de interés.</p>
+    <h3 style="margin-top:1.5rem;">¿Qué son las cookies?</h3>
+    <p>Las cookies son pequeños archivos que se almacenan en tu dispositivo cuando visitas una página web.</p>
+    <h3 style="margin-top:1rem;">Tipos de cookies que utilizamos</h3>
+    <p><strong>Cookies técnicas:</strong> Necesarias para el funcionamiento del sitio.</p>
+    <p><strong>Cookies analíticas:</strong> Nos permiten medir el tráfico y comportamiento de los usuarios (Google Analytics).</p>
+    <p><strong>Cookies de personalización:</strong> Recuerdan tus preferencias de navegación.</p>
+    <h3 style="margin-top:1rem;">¿Cómo desactivarlas?</h3>
+    <p>Puedes configurar tu navegador para rechazar cookies. Consulta la ayuda de tu navegador para más información.</p>
+  </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('a[href="#cookies"]').forEach(function(el) {
+            el.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('cookies-modal').style.display = 'flex';
+            });
+        });
+
+    // Esperar a que CookieConsent renderice el banner
+    setTimeout(function() {
+            var ccLink = document.querySelector('.cc-link');
+            if (ccLink) {
+            ccLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.getElementById('cookies-modal').style.display = 'flex';
+            });
+            }
+        }, 1000);
+    });
+</script>

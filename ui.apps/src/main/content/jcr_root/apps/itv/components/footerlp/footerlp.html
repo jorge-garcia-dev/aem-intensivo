@@ -31,7 +31,7 @@
                 </div>
                 <sly data-sly-use.footerModel="com.itv.core.models.FooterModel">
                     <ul data-sly-list.item="${footerModel.navItems}">
-                        <li><a href="${item.navLink @ extension='html'}">${item.text}</a></li>
+                        <li><a href="${item.navLink @ extension='html'}?wcmmode=disabled">${item.text}</a></li>
                     </ul>
                 </sly>
             </div>
