@@ -1,0 +1,54 @@
+<sly data-sly-use.model="com.itv.core.models.CardsbyModel"/>
+
+<section class="cardsby">
+  <div class="cardsby__container">
+
+    <div class="cardsby__section-header">
+      <div class="cardsby__section-tag" data-sly-test="${properties.sectionTag}">
+        <span class="cardsby__section-line"></span>
+        <span class="cardsby__section-label">${properties.sectionTag}</span>
+      </div>
+      <h2 class="cardsby__section-title" data-sly-test="${properties.sectionTitle}">
+        ${properties.sectionTitle}
+      </h2>
+    </div>
+
+    <!-- Grid desktop/tablet -->
+    <div class="cardsby__grid" data-sly-test="${!model.cards.empty}">
+      <sly data-sly-list.card="${model.cards}">
+        <article class="cardsby__card">
+          <div class="cardsby__image-wrapper">
+            <img class="cardsby__image" src="${card.image}" alt="${card.nombre}"/>
+          </div>
+          <div class="cardsby__content">
+            <h3 class="cardsby__nombre">${card.nombre}</h3>
+            <p class="cardsby__precio">${card.precio}</p>
+            <p class="cardsby__descripcion">${card.descripcion}</p>
+            <a class="cardsby__cta" href="${card.ctaEnlace}">${card.ctaTexto}</a>
+          </div>
+        </article>
+      </sly>
+    </div>
+
+    <!-- Swiper móvil -->
+    <div class="cardsby__swiper swiper" data-sly-test="${!model.cards.empty}">
+      <div class="swiper-wrapper">
+        <sly data-sly-list.card="${model.cards}">
+          <article class="swiper-slide cardsby__card">
+            <div class="cardsby__image-wrapper">
+              <img class="cardsby__image" src="${card.image}" alt="${card.nombre}"/>
+            </div>
+            <div class="cardsby__content">
+              <h3 class="cardsby__nombre">${card.nombre}</h3>
+              <p class="cardsby__precio">${card.precio}</p>
+              <p class="cardsby__descripcion">${card.descripcion}</p>
+              <a class="cardsby__cta" href="${card.ctaEnlace}">${card.ctaTexto}</a>
+            </div>
+          </article>
+        </sly>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+</section>

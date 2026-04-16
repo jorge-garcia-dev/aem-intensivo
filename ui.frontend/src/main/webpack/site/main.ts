@@ -1,8 +1,11 @@
+import Swiper from 'swiper/bundle';
+(window as any).Swiper = Swiper;
+
+
 // Stylesheets
 import "./main.scss";
 
 // Javascript or Typescript
 import "./**/*.js";
-import "./**/*.ts";
-import '../components/**/*.js';
-import '../components/_cardlistlp.js';
+import "../components/**/*.js";
+import "../components/_cardsby.js";
